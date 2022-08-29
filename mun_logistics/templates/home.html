@@ -1,0 +1,11 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+{% block content %}
+
+{% for post in post_list %}
+    <div class="post-entry">
+        <h2><a href="">{{ booking.sender_name }}</a></h2>
+        <p>{{ booking.sender_address }}</p>
+    </div>
+{% endfor %}
+{% endblock content %}
