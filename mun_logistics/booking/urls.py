@@ -1,6 +1,9 @@
+# booking/urls.py
 from django.urls import path
-from .views import BookingListView
+from .views import BookingListView, BookingDetailView
 
-urlpattens = [
-    path("",BookingListView.as_view(), name ="home")
+
+urlpatterns = [
+    path("booking/<int:pk>/",BookingDetailView.as_view(), name="booking_detail"),
+    path("", BookingListView.as_view(), name="home"),
 ]

@@ -3,7 +3,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.urls import reverse
 
 # Create your models here.
-class Sernder_Details(models.Model):
+class Booking_Details(models.Model):
     sender_name = models.CharField(max_length=400)
     sender_address = models.CharField(max_length=400)
     sender_phone = PhoneNumberField()

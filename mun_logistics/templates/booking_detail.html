@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                <h3>Collection Details</h3>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Sender: {{ booking_details.sender_name }}</li>
+                <li class="list-group-item">Address: {{ booking_details.sender_address }}</li>
+                <li class="list-group-item">Phone: {{ booking_details.sender_phone }}</li>
+                <li class="list-group-item">Email: {{ booking_details.sender_email }}</li>
+                <li class="list-group-item">Collection Date: {{ booking_details.collection_date}}</li>
+                <li class="list-group-item">Time Slot: {{ booking_details.time_slot }}</li>
+              </ul>
+            </div>
+        
+            <br>
+
+        <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            <h3>Items To Be Colleccted</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Boxes: {{ booking_details.boxes }}</li>
+        <li class="list-group-item">Drums: {{ booking_details.drums }}</li>
+        <li class="list-group-item">Odd Parcels/Items: {{ booking_details.odd_parcels_items }}</li>
+      </ul>
+    </div>
+    <br>
+
+        <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            <h3>Recepient Details</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Recipient: {{ booking_details.receiver_name }}</li>
+        <li class="list-group-item">Address: {{ booking_details.receiver_address }}</li>
+        <li class="list-group-item">Phone: {{ booking_details.receiver_phone }}</li>
+        <li class="list-group-item">Email: {{ booking_details.receiver_email }}</li>
+      </ul>
+    </div>
+    <br>
+</div>
+    <a href="#" class="btn btn-primary">Edit Boooking</a>
+{% endblock content %}
