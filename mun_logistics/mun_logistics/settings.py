@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'mun_logistics.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'booking_db',
+        'USER': 'postgres',
+        'PASSWORD': '18ab934ad3504e53b85118b2fcd9927d',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
