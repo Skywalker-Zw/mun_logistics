@@ -1,6 +1,8 @@
 <!-- templates/home.html -->
 {% extends "base.html" %}
 {% block content %}
+<a href="{% url 'create_booking' %}" class="btn btn-primary">Create a Boooking</a>
+
 
 {% for booking_details in booking_details_list %}
     <div class="post-entry">
