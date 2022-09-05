@@ -1,6 +1,6 @@
 # booking/views.py
 from django.views.generic import ListView, DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import Booking_Details
 from django.urls import reverse_lazy
 class BookingListView(ListView):
@@ -16,3 +16,11 @@ class BookingCreate(CreateView):
     fields = "__all__"
     template_name = "create_booking.html"
     success_url = reverse_lazy("home")
+
+class BookingUpdate(UpdateView):
+    model = Booking_Details
+    fields = "__all__"
+    template_name = "update_booking.html"
+    #success_url = reverse_lazy("home")
+
+

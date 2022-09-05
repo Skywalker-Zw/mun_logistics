@@ -8,6 +8,7 @@
     <div class="post-entry">
         <h2><a href="{% url 'booking_detail' booking_details.pk %}">{{ booking_details.sender_name }}</a></h2>
         <p>{{ booking_details.sender_address }}</p>
+        
     </div>
 {% endfor %}
 {% endblock content %}
