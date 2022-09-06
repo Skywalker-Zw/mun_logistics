@@ -3,12 +3,25 @@
 {% block content %}
 <a href="{% url 'create_booking' %}" class="btn btn-primary">Create a Boooking</a>
 
+<br>
+
 
 {% for booking_details in booking_details_list %}
-    <div class="post-entry">
+    <!-- <div class="post-entry">
         <h2><a href="{% url 'booking_detail' booking_details.pk %}">{{ booking_details.sender_name }}</a></h2>
         <p>{{ booking_details.sender_address }}</p>
         
-    </div>
+    </div> -->
+    <div class="card">
+        <div class="card-header">
+            {{ booking_details.sender_name }}
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ booking_details.receiver_name}}</h5>
+          <p class="card-text">{{ booking_details.sender_address }}</p>
+          <a href="{% url 'booking_detail' booking_details.pk %}" class="btn btn-primary">View Booking</a>
+          <a href="{% url 'booking_detail' booking_details.pk %}" class="btn btn-primary">Edit Booking</a>
+        </div>
+      </div>
 {% endfor %}
 {% endblock content %}

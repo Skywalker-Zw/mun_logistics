@@ -1,5 +1,5 @@
 from django.contrib import admin
-from . models import Booking_Details
+from . models import Booking_Details, ShippingDetails
 # Register your models here.
 
 class Booking_DetailsAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class Booking_DetailsAdmin(admin.ModelAdmin):
     
 
 admin.site.register(Booking_Details, Booking_DetailsAdmin)
+admin.site.register(ShippingDetails)

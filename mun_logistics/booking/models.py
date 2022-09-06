@@ -26,4 +26,12 @@ class Booking_Details(models.Model):
     def get_absolute_url(self):
         return reverse("booking_detail", kwargs={"pk": self.pk})
 
-
+class ShippingDetails(models.Model):
+    origin = models.CharField(max_length=400)
+    destination = models.CharField(max_length=400)
+    shipment_mode = models.CharField(max_length=400)
+    shipment_date = models.DateField()
+    time_updated = models.TimeField()
+    location = models.CharField(max_length=400)
+    updated_by = models.CharField(max_length=400)
+    remarks = models.CharField(max_length=400)
